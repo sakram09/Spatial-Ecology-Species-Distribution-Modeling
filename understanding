@@ -1,0 +1,27 @@
+Title: Spatial Clustering of Ecological Niches: Unsupervised Prediction of Species Habitat Suitability
+The Core Idea: Ek makhsoos endangered bird ya plant species ke milne ki locations (GPS Coordinates) ka data lena aur coordinate-level climate data (Rainfall, Elevation) use karke map par clusters banana jo batayein ke kaun kaun se ilaqe us species ke rehne ke liye bilkul perfect (Suitable Niches) hain.
+
+Asal Source Dataset: Global Biodiversity Information Facility (GBIF) ya Kaggle se kisi bhi species ka GPS occurrence data.
+
+Desi Presentation Summary (Kia Kiya Aur Kse Kiya):
+1. Data Aur Sample Size:
+
+Total 500 unique locations (samples) ka data hai jahan wo species wild mein dekhi gayi thi.
+
+Features: Har location ka Latitude, Longitude, Annual Rainfall (mm), aur Altitude/Elevation (meters).
+
+2. Model Selection Aur Kyun Kiya? (The Twist):
+
+Model: K-Means Clustering (Unsupervised Learning).
+
+Kyun Kiya: Kyunki hamein pehle se nahi pata ke kaunsa ilaqa kaisa hai. Hum machine ko bolte hain ke coordinates aur climate data ko aapas mein jod kar 3 natural groups (Clusters) banaye:
+
+Cluster 0: High Elevation, Low Rainfall (Alpine Niche)
+
+Cluster 1: Low Elevation, High Rainfall (Tropical/Valley Niche)
+
+Cluster 2: Moderate/Optimal Niche (Sab se zaroori ilaqa)
+
+3. Visual Plot (Professor Target):
+
+Hum seedha Latitude aur Longitude ko X aur Y axis par plot karenge (Real Map representation). Har dot ek location hogi, aur unka rang (Color) unka Cluster batayega. Isse professor ko screen par Geographical Habitat Map nazar aayega bina kisi PCA compression ke.
